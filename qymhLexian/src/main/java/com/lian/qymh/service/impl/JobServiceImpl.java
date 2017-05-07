@@ -2,30 +2,29 @@ package com.lian.qymh.service.impl;
 
 import java.util.List;
 
-import com.lian.qymh.entity.LexianUser;
-import com.lian.qymh.service.UserService;
+import com.lian.qymh.entity.LexianJob;
+import com.lian.qymh.service.JobService;
 
-public class UserServiceImpl implements UserService {
+public class JobServiceImpl implements JobService {
 
-	public List<LexianUser> getUser() {
+	public List<LexianJob> getJob() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public int insertUser() {
+	public int insertJob() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	public int updateUser() {
+	public int updateJob() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	public int delteUser() {
+	public int delteJob() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	
 }

@@ -5,21 +5,21 @@ import java.util.List;
 import com.lian.qymh.entity.LexianUser;
 
 /*
- * 对user表的操作
+ * 瀵箄ser琛ㄧ殑鎿嶄綔
  * 
  */
 public interface UserService {
 
-	//查询
+	//鏌ヨ
 	public List<LexianUser> getUser();
 	
-	//新增
+	//鏂板
 	public int insertUser();
 		
-	//修改
+	//淇敼
 	public int updateUser();
 	
-	//删除
+	//鍒犻櫎
 	public int delteUser();
 	
 	
