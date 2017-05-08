@@ -78,7 +78,7 @@ public class lexianController {
 		
 		//新增用户
 		@RequestMapping("addjob")
-		public int insterjob(Lexianjob job){
+		public int insterjob(LexianJob job){
 		
 		return 0;
 		}
