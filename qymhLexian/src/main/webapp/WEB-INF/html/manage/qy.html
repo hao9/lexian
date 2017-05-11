@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>adduser</title>
+ <script type="text/javascript" src="/lexian/js/jquery-1.11.2.min.js"></script>
+ <script type="text/javascript" src="/lexian/js/qy.js"></script>
+</head>
+<body>
+	<center>
+						
+		<form action="/lexian/qy/insetqy.do" method="post">
+			<table style="padding: 100px;">
+				<input type="text" name="id"  hidden='true'/>
+				<tr>
+					<td class="tableleft">:</td>
+					<td><input type="text" name="name" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">地址:</td>
+					<td><input type="text" name="address" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">E-mail:</td>
+					<td><input type="text" name="email" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">电话:</td>
+					<td><input type="text" name="phone" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">联系人:</td>
+					<td><input type="text" name="contactPerson" /></td>
+				</tr>
+			</table>
+			<button type="submit" >保存</button>
+			&nbsp;&nbsp;
+			<button type="button" name="backid" id="backid">返回列表</button>
+		</form>
+	</center>
+</body>
+</html>

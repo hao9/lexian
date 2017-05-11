@@ -10,7 +10,7 @@ public interface LexianUserMapper {
 
     int deleteByExample(LexianUserExample example);
 
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(LexianUser record);
 

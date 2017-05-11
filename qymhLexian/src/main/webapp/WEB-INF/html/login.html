@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>艺谷（深圳）后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/logincss/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/logincss/admin-all.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/logincss/bootstrap.min.css"/>
+    <script type="text/javascript" src="../js/loginjs/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../js/loginjs/jquery.spritely-0.6.js"></script>
+    <script type="text/javascript" src="../js/loginjs/chur.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/logincss/login.css" />
+    <link rel="stylesheet" type="text/css" href="../css/shou.css" />
+    <script type="text/javascript">
+        $(function () {
+            $('#clouds').pan({ fps: 20, speed: 0.7, dir: 'right', depth: 10 });
+            $('.login').click(function () {
+                if ($('#NAME').val() == "" || $('#PASSWORD').val() == "" || $('#code').val() == "") { 
+                	$('.tip').html('用户名或密码不可为空！') ;
+                }else {
+                	//window.location.href = "/lexian/user/login.do?name="+$("#NAME").val()+"&&password="+$("#PASSWORD").val();
+                	 $.ajax({
+                		type: "GET",
+                        url: "/lexian/user/login/login.do",
+                        data: {'name':$("#NAME").val(),'password':$("#PASSWORD").val()},
+                        dataType: "json",
+                         success: function(data){	
+                        	 if("success" == data){
+                        		 window.location.href = "manage/manage.html";
+                        	 }
+                			} 
+                        }) 
+                    //location.href = '/lexian/html/manage/manage.html';
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="contro" class="stage"></div>
+    <div class="loginmain">
+    </div>
+    <div class="shou"><a href="../html/shou.html">【首页】</a><div>
+
+    <div class="row-fluid">
+        <h1>乐贤（深圳）后台管理系统</h1>
+        <p>
+            <label>帐&nbsp;&nbsp;&nbsp;号：<input type="text" id="NAME" /></label>
+        </p>
+        <p>
+            <label>密&nbsp;&nbsp;&nbsp;码：<input type="password" id="PASSWORD" /></label>
+        </p>
+        
+        <p class="tip">&nbsp;</p>
+        <hr />
+        <input type="button" value=" 登 录 " class="btn btn-primary btn-large login" />
+        &nbsp;&nbsp;&nbsp;<input type="button" value=" 取 消 " class="btn btn-large" />
+    </div>
+</body>
+</html>

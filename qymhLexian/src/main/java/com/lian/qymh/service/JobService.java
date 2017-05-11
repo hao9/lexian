@@ -7,15 +7,15 @@ import com.lian.qymh.entity.LexianJob;
 public interface JobService {
 
 		//查询
-		public List<LexianJob> getJob();
+		public List<LexianJob> getJob(LexianJob job);
 		
 		//新增
-		public int insertJob();
+		public int insertJob(LexianJob job);
 			
 		//修改
-		public int updateJob();
+		public void updateJob(LexianJob job);
 		
 		//删除
-		public int delteJob();
+		public int delteJob(Integer id);
 	
 }

@@ -11,16 +11,20 @@ import com.lian.qymh.entity.LexianUser;
 public interface UserService {
 
 	//查询
-	public List<LexianUser> getUser();
+	public List<LexianUser> getUser(LexianUser user);
 	
 	//新增
-	public int insertUser();
+	public int insertUser(LexianUser user);
 		
 	//修改
-	public int updateUser();
+	public void updateUser(LexianUser user);
 	
 	//删除
-	public int delteUser();
+	public int delteUser(LexianUser user);
+
+	
+
+	
 	
 	
 }

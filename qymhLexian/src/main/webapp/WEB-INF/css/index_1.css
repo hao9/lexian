@@ -1,0 +1,34 @@
+/* ::::: http://api.map.baidu.com/res/11/bmap.css ::::: */
+
+.BMap_mask { background: transparent url('blank.gif') repeat scroll 0% 0%; }
+.BMap_button { cursor: pointer; }
+.BMap_zoomer { background-image: url('mapctrls.gif'); background-repeat: no-repeat; overflow: hidden; font-size: 1px; position: absolute; width: 7px; height: 7px; }
+.BMap_stdMpCtrl div { position: absolute; }
+.BMap_stdMpPan { width: 37px; height: 57px; overflow: hidden; background: transparent url('mapctrls11.png') no-repeat scroll 0% 0%; }
+.BMap_stdMpPan .BMap_button { height: 16px; width: 16px; }
+.BMap_panN, .BMap_panW, .BMap_panE, .BMap_panS { overflow: hidden; }
+.BMap_panN { left: 9px; top: 0px; }
+.BMap_panW { left: 0px; top: 19px; }
+.BMap_panE { left: 19px; top: 19px; }
+.BMap_panS { left: 9px; top: 38px; }
+.BMap_stdMpZoom { top: 59px; overflow: hidden; }
+.BMap_stdMpZoom .BMap_button { width: 18px; height: 19px; left: 9px; overflow: hidden; background-image: url('mapctrls11.png'); background-repeat: no-repeat; }
+.BMap_stdMpZoomIn { background-position: -9px -57px; }
+.BMap_stdMpZoomOut { background-position: -9px -293px; bottom: 0px; }
+.BMap_stdMpSlider { width: 37px; top: 16px; }
+.BMap_stdMpSliderBgTop { width: 37px; overflow: hidden; background: transparent url('mapctrls11.png') no-repeat scroll 0px -76px; }
+.BMap_stdMpSliderBgBot { height: 8px; width: 37px; top: 124px; overflow: hidden; background: transparent url('mapctrls11.png') no-repeat scroll 0px -284px; }
+.BMap_stdMpSliderMask { height: 100%; width: 24px; left: 5px; cursor: pointer; }
+.BMap_stdMpSliderBar { height: 13px; width: 22px; left: 7px; top: 80px; overflow: hidden; background: transparent url('mapctrls11.png') no-repeat scroll 0px -312px; }
+.BMap_zlSt, .BMap_zlCity, .BMap_zlProv, .BMap_zlCountry { position: absolute; left: 27px; height: 20px; width: 25px; background-image: url('mapctrls11.png'); background-repeat: no-repeat; font-size: 0px; cursor: pointer; }
+.BMap_zlHolder { display: none; position: absolute; top: 0px; }
+.BMap_zlSt { background-position: 0px -338px; top: 14px; }
+.BMap_zlCity { background-position: 0px -358px; top: 56px; }
+.BMap_zlProv { background-position: 0px -378px; top: 84px; }
+.BMap_zlCountry { background-position: 0px -398px; top: 112px; }
+.shadow img { border: 0px none; margin: 0px; padding: 0px; position: absolute; height: 370px; width: 1144px; }
+.pop .top { border-top: 1px solid rgb(171, 171, 171); background-color: rgb(255, 255, 255); }
+.pop .center { border-left: 1px solid rgb(171, 171, 171); border-right: 1px solid rgb(171, 171, 171); background-color: rgb(255, 255, 255); }
+.pop .bottom { border-bottom: 1px solid rgb(171, 171, 171); background-color: rgb(255, 255, 255); }
+.shadow, .shadow img, .shadow div { -moz-user-select: none; }
+pop .top img, .pop .center img, .pop .bottom img { display: none; }

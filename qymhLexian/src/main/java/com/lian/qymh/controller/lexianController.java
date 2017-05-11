@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lian.qymh.entity.LexianJob;
 import com.lian.qymh.entity.LexianUser;
@@ -23,30 +25,32 @@ public class lexianController {
 	
 	//获取用户列表
 	@RequestMapping("/getuser")
-	public List<LexianUser> getUser(){
+	public  @ResponseBody List<LexianUser> getUser(LexianUser user){
 		
-		return null;
+		return userService.getUser(user);
 	}
 	
 	//删除用户
 	@RequestMapping("/delteuser")
-	public int delteuser(LexianUser user){
-		
-		return 0;
+	public @ResponseBody String delteuser(LexianUser user){
+		userService.delteUser(user);
+		return "sruuer";
 	}
 	
 	//修改用户
 	@RequestMapping("/updateuser")
 	public int updateuser(LexianUser user){
 		
+				
+		userService.updateUser(user);
 		return 0;
 	}
 	
 	//新增用户
 	@RequestMapping("adduser")
-	public int insterUser(LexianUser user){
-		
-		return 0;
+	public  @ResponseBody String insterUser(LexianUser id){
+		userService.insertUser(id);
+		return"";
 	}
 	
 	
@@ -57,30 +61,30 @@ public class lexianController {
 		
 		//获取用户列表
 		@RequestMapping("/getjob")
-		public List<LexianJob> getJob(){
-		
-		return null;
+		public @ResponseBody List<LexianJob> getJob(LexianJob job){
+			
+		return jobService.getJob(job);
 		}
 		
 		//删除用户
 		@RequestMapping("/deltejob")
-		public int deltejob(LexianJob job){
-		
-		return 0;
+		public @ResponseBody String deltejob(Integer id){
+			jobService.delteJob(id);
+		return "";
 		}
 		
 		//修改用户
 		@RequestMapping("/updatejob")
 		public int updatejob(LexianJob job){
-		
-		return 0;
+			jobService.updateJob(job);
+		return 0 ;
 		}
 		
 		//新增用户
 		@RequestMapping("addjob")
-		public int insterjob(LexianJob job){
-		
-		return 0;
+		public@ResponseBody String insterjob(LexianJob job){
+			jobService.insertJob(job);
+		return"";
 		}
 			
 	

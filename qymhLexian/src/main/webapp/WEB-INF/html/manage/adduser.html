@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>adduser</title>
+ <script type="text/javascript" src="/lexian/js/jquery-1.11.2.min.js"></script>
+ <script type="text/javascript" src="/lexian/js/adduser.js"></script>
+</head>
+<body>
+	<center>
+
+		<form action="/lexian/us/usadd.do" method="post">
+			<table style="padding: 100px;">
+				<input type="text" name="id"  hidden='true'/>
+				<tr>
+					<td class="tableleft">职位名称:</td>
+					<td><input type="text" name="name" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">职位类别:</td>
+					<td><input type="text" name="sort" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">招聘人数:</td>
+					<td><input type="text" name="recruit" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">工作地点:</td>
+					<td><input type="text" name="location" /></td>
+				</tr>
+				<tr>
+					<td class="tableleft">发布时间:</td>
+					<td><input type="text" name="release" /></td>
+				</tr>
+			</table>
+			<button type="submit" >保存</button>
+			&nbsp;&nbsp;
+			<button type="button" name="backid" id="backid">返回列表</button>
+		</form>
+	</center>
+</body>
+</html>

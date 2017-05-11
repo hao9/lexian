@@ -10,7 +10,7 @@ public interface LexianJobMapper {
 
     int deleteByExample(LexianJobExample example);
 
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(LexianJob record);
 
