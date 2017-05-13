@@ -11,14 +11,14 @@ $(function () {
 		dataJson = {
 				username:$("#name").val()
 		};
-		url = "/lexian/user/listuser.do";
+		url = "/qyhmLexian/lexian/getuser.do";
 		$("#adduser").text("新增用户");
 	}else{
 		type = "company";
 		dataJson = {
 				companyName:$("#name").val()
 		};
-		url = "/lexian/user/listcompanyr.do";
+		url = "/qyhmLexian/user/listcompanyr.do";
 		$("#adduser").text("新增信息");
 	}
 	 //d调转到新增页面
@@ -68,7 +68,7 @@ function getPageData(page){
 				curr:page,
 				username:$("#name").val()
 		};
-		url = "/lexian/user/listuser.do";
+		url = "/lexian/user/getuser.do";
 		$("#adduser").text("新增用户");
 	}else{
 		type = "company";
@@ -76,7 +76,7 @@ function getPageData(page){
 				curr:page,
 				companyName:$("#name").val()
 		};
-		url = "/lexian/user/listcompanyr.do";
+		url = "/lexian/user/getjob.do";
 		$("#adduser").text("新增信息");
 	}
 	doAjaxFunction(url,dataJson,headUser);

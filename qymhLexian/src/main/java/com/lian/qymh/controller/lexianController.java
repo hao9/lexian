@@ -86,6 +86,21 @@ public class lexianController {
 			jobService.insertJob(job);
 		return"";
 		}
-			
-	
+		/////////////////LOG管理 start///////////////////////////////////
+		
+		private final String named="qiumei";
+		private final String passwordd="12";
+		
+		@RequestMapping("login")
+		public String selectlogin(String name ,String password){
+			if(null!= name && null != password){
+				if(name.equals(named)&&password.equals(passwordd)){
+					return"manage/index.html" ;
+				}else {
+					return"html/login.html" ;
+				}
+			}
+		return   "";
+		}
+		
 }
