@@ -9,6 +9,8 @@ public class LexianUser {
 
     private String address;
 
+    private String email;
+
     private String phone;
 
     private String back;
@@ -41,6 +43,14 @@ public class LexianUser {
 
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
     }
 
     public String getPhone() {

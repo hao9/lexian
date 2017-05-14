@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-	public int delteUser(Integer id) {
+	public int delteUser(String id) {
 		// TODO Auto-generated method stub
 		return lexianuserMapper.deleteByPrimaryKey(id);
 	}

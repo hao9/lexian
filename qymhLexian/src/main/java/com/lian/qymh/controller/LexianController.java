@@ -4,6 +4,7 @@ package com.lian.qymh.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +17,20 @@ import com.lian.qymh.service.UserService;
 
 @Controller
 @RequestMapping("/lexian")
-public class lexianController {
+public class LexianController {
 
 	/////////////////User管理 start///////////////////////////////////
 	
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private JobService jobService;
 	
+	public void setJobService(JobService jobService) {
+		this.jobService = jobService;
+	}
+
 	//获取用户列表
 	@RequestMapping("/getuser")
 	public  @ResponseBody List<LexianUser> getUser(LexianUser user){
@@ -54,53 +62,52 @@ public class lexianController {
 	}
 	
 	
-		/////////////////job管理 start///////////////////////////////////
-			
-		@Autowired
-		private JobService jobService;
+	/////////////////job管理 start///////////////////////////////////
 		
-		//获取用户列表
-		@RequestMapping("/getjob")
-		public @ResponseBody List<LexianJob> getJob(LexianJob job){
-			
-		return jobService.getJob(job);
-		}
+	
+	
+	//获取用户列表
+	@RequestMapping("/getjob")
+	public @ResponseBody List<LexianJob> getJob(LexianJob job){
 		
-		//删除用户
-		@RequestMapping("/deltejob")
-		public @ResponseBody String deltejob(Integer id){
-			jobService.delteJob(id);
-		return "";
-		}
+	return jobService.getJob(job);
+	}
+	
+	//删除用户
+	@RequestMapping("/deltejob")
+	public @ResponseBody String deltejob(String id){
+		jobService.delteJob(id);
+	return "";
+	}
+	
+	//修改用户
+	@RequestMapping("/updatejob")
+	public int updatejob(LexianJob job){
+		jobService.updateJob(job);
+	return 0 ;
+	}
+	
+	//新增用户
+	@RequestMapping("/addjob")
+	public@ResponseBody String insterjob(LexianJob job){
 		
-		//修改用户
-		@RequestMapping("/updatejob")
-		public int updatejob(LexianJob job){
-			jobService.updateJob(job);
-		return 0 ;
-		}
-		
-		//新增用户
-		@RequestMapping("addjob")
-		public@ResponseBody String insterjob(LexianJob job){
-			jobService.insertJob(job);
-		return"";
-		}
-		/////////////////LOG管理 start///////////////////////////////////
-		
-		private final String named="qiumei";
-		private final String passwordd="12";
-		
-		@RequestMapping("login")
-		public String selectlogin(String name ,String password){
-			if(null!= name && null != password){
-				if(name.equals(named)&&password.equals(passwordd)){
-					return"manage/index.html" ;
-				}else {
-					return"html/login.html" ;
-				}
+		return jobService.insertJob(job)+"";
+	}
+	/////////////////LOG管理 start///////////////////////////////////
+	
+	private final String named="qiumei";
+	private final String passwordd="12";
+	
+	@RequestMapping("login")
+	public String selectlogin(String name ,String password){
+		if(null!= name && null != password){
+			if(name.equals(named)&&password.equals(passwordd)){
+				return"manage/index.html" ;
+			}else {
+				return"html/login.html" ;
 			}
-		return   "";
 		}
+	return   "";
+	}
 		
 }

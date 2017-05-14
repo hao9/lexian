@@ -16,6 +16,6 @@ public interface JobService {
 		public void updateJob(LexianJob job);
 		
 		//删除
-		public int delteJob(Integer id);
+		public int delteJob(String id);
 	
 }

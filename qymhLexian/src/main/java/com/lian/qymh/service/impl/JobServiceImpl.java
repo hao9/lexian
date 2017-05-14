@@ -19,15 +19,14 @@ public class JobServiceImpl implements JobService {
 	public List<LexianJob> getJob(LexianJob job) {
 		LexianJobExample example=new LexianJobExample();
 		Criteria criteria=example.createCriteria();
-		if(null !=job.getNum()&&!"" .equals(job.getNum()))
-			criteria.andJobLike(null);
-			example.or(criteria);
+		
+		example.or(criteria);
 		return lexianjobmapper.selectByExample(example);
 	}
 
 	public int insertJob(LexianJob job) {
 		
-		return lexianjobmapper.insert(job);
+		return lexianjobmapper.insertSelective(job);
 	}
 
 	public void updateJob(LexianJob job) {
@@ -35,7 +34,7 @@ public class JobServiceImpl implements JobService {
 		 lexianjobmapper.updateByPrimaryKey(job);
 	}
 
-	public int delteJob(Integer id) {
+	public int delteJob(String id) {
 		// TODO Auto-generated method stub
 		return lexianjobmapper.deleteByPrimaryKey(id);
 	}
